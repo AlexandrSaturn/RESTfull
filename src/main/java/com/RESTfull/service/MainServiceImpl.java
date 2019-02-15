@@ -22,8 +22,8 @@ public class MainServiceImpl implements MainService{
         return userRepository.findById(id);
     }
 
-    public User save(User user) {
-        return userRepository.save(user);
+    public void save(User user) {
+        userRepository.save(user);
     }
 
     public void deleteById(long id) {

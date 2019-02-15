@@ -2,6 +2,7 @@ package com.RESTfull.entity;
 
 
 import javax.persistence.*;
+import java.util.Collections;
 import java.util.Set;
 
 @Entity
@@ -48,6 +49,14 @@ public class User {
         this.email = email;
         this.verify = false;
         this.roles = roles;
+    }
+
+    public User(String login, String password, String email) {
+        this.login = login;
+        this.password = password;
+        this.email = email;
+        this.verify = false;
+        this.roles = Collections.singleton(Role.USER);
     }
 
     public Long getId() {

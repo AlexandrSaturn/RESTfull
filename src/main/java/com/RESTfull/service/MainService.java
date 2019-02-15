@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 public interface MainService {
     Iterable<User> getAll();
     User getById(Integer id);
-    User save(User user);
+    void save(User user);
     void deleteById(long id);
 }
