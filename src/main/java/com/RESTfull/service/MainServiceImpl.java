@@ -18,7 +18,7 @@ public class MainServiceImpl implements MainService{
         return userRepository.findAll();
     }
 
-    public User getById(Integer id) {
+    public Optional<User> getById(Long id) {
         return userRepository.findById(id);
     }
 
@@ -29,4 +29,6 @@ public class MainServiceImpl implements MainService{
     public void deleteById(long id) {
         userRepository.deleteById(id);
     }
+
+
 }

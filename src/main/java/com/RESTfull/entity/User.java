@@ -35,12 +35,13 @@ public class User {
     public User() {
     }
 
-    public User(String login, String password, String email, Boolean verify, Set<Role> roles) {
+    public User(String login, String password, String email, Boolean verify, Set<Role> roles, Organizations organizations) {
         this.login = login;
         this.password = password;
         this.email = email;
         this.verify = verify;
         this.roles = roles;
+
     }
 
     public User(String login, String password, String email, Set<Role> roles) {
@@ -49,6 +50,7 @@ public class User {
         this.email = email;
         this.verify = false;
         this.roles = roles;
+
     }
 
     public User(String login, String password, String email) {
@@ -83,6 +85,7 @@ public class User {
         return roles;
     }
 
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -106,4 +109,5 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
 }
